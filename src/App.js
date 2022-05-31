@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { ColorPicker } from './components/ColorPicker/ColorPicker';
 import React, { useEffect, useState } from 'react';
