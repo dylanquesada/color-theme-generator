@@ -4,7 +4,7 @@ export const ColorSwathe = ({ color }) => {
     }
     return (
         <div className="border" style={colorStyle}>
-            <p style={{ margin: '1vw 30vw', backgroundColor: "#f6f6f6" }}>
+            <p style={{ margin: '1vw 25vw', backgroundColor: "#f6f6f6" }}>
                 {color}
             </p>
         </div>

@@ -16,7 +16,8 @@ function App() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
 
-  // TODO: break out useEffect into an API directory
+  // TODO: break out useEffect into an API directory and abstract it 
+  // to make it easier to integrate with other APIs
   useEffect(() => {
     const url = "http://colormind.io/api/";
 
@@ -72,7 +73,7 @@ function App() {
             <h1>Color Theme Generator</h1>
           </header>
           <section className='card-body'>
-            <p>select up to five colors to generate a theme</p>
+            <p>select up to three colors to generate a theme</p>
             <div className='d-flex flex-row row m-1 justify-content-evenly'>
               {pickers.map(picker => {
                 return (
@@ -88,7 +89,7 @@ function App() {
             <div className='d-flex flex-column m-auto w-50'>
               <button
                 className='my-2 btn btn-default border'
-                disabled={pickers.length >= 5}
+                disabled={pickers.length >= 3}
                 onClick={handleIncrement}
               >+ Add Color Selector</button>
               <button
